@@ -1,8 +1,12 @@
 t = int(input())
-if t % 10 != 0:
+d = [300, 60, 10]
+s = [0, 0, 0]
+for i in range(3):
+    x = t // d[i]
+    y = t % d[i]
+    s[i] = x
+    t = y
+if y != 0:
     print(-1)
-else:
-    a = t // 300
-    b = (t % 300) // 60
-    c = (t % 60) // 10
-    print(a, b, c)
+    exit()
+print(*s)
