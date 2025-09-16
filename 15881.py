@@ -1,3 +1,3 @@
 n = int(input())
-s = input().count("pPAp")
-print(s)
+s = input()
+print(s.count("pPAp"))
