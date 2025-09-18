@@ -1,11 +1,12 @@
 n = int(input())
-l = list(map(int, input().split()))
-if n > 1:
-    if l[0] in [1, n] and l[1] in [1, n]:
-        print(2)
-    elif 1 < l[0] < n and l[1] in [1, n] or l[0] in [1, n] and 1 < l[1] < n:
-        print(3)
-    else:
-        print(4)
-else:
-    print(0)
+x, y = map(int, input().split())
+c = 0
+if x > 1:
+    c += 1
+if x < n:
+    c += 1
+if y > 1:
+    c += 1
+if y < n:
+    c += 1
+print(c)
